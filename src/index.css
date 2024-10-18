@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.clip-path-custom {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+   border-bottom-left-radius: 42px;
+   border-bottom-right-radius: 42px;
+}
+@media screen and (min-width:992px) {
+  .clip-path-custom {
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+}
+  @keyframes textPulse {
+    0%, 100% {
+      color: #fbbf24; /* Начальный и конечный цвет текста (желтый) */
+      background-color: #ef4444; /* Начальный и конечный цвет фона (красный) */
+    }
+    50% {
+      color: #facc15; /* Средний цвет текста */
+      background-color: #dc2626; /* Средний цвет фона (темно-красный) */
+    }
+  }
+  @keyframes modalanimationactive {
+    0% {
+     margin-top: -100dvh;
+    }
+    100% {
+      margin-top: 0px;
+    }
+  }
+  @keyframes modalanimationnoneactive {
+    0% {
+      margin-top: 0px;
+    }
+    100% {
+      margin-top: -100dvh;
+    }
+  }
+  .modal-animation-active{
+    animation:modalanimationactive 0.5s ease-in-out forwards;
+  }
+  .modal-animation-nonactive{
+    animation:modalanimationnoneactive 0.5s ease-in-out forwards;
+  }
+  .animate-text-pulse {
+    animation: textPulse 1.5s ease-in-out infinite;
+  }
+  .left-content{
+    background: linear-gradient(to bottom, #FF7F7F, #500000);
+  }
+
+  @keyframes gradient-text-li {
+    0% {
+      background-position: 20% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 20% 50%;
+    }
+  }
+  .text-prof {
+    margin-left: 20px;
+  }
+
+
+  .animated-gradient-text-li {
+    background: linear-gradient(270deg, #000000, #00ffdd, #00FF7F, #007FFF, #7F00FF);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-text-li 10s ease infinite;
+  }
+  
+  .text-animated {
+    animation: shake 2s ease-in-out infinite;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0); /* Начальное положение */
+    }
+    10% {
+      transform: translateX(-5px); /* Немного влево */
+    }
+    20% {
+      transform: translateX(5px); /* Немного вправо */
+    }
+    30% {
+      transform: translateX(-3px); /* Немного влево */
+    }
+    40% {
+      transform: translateX(3px); /* Немного вправо */
+      color:#53dde2
+    }
+    50% {
+      transform: translateX(0); /* Возвращение к начальному положению */
+    }
+    100% {
+      transform: translateX(0); /* Заключительное положение */
+    }
+  }
+  
